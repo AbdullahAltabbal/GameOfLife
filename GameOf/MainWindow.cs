@@ -31,7 +31,7 @@ namespace GameOf
                 Auto_Start.Content = "Starte";
                 ZubauZelleClass1 neuZell = new ZubauZelleClass1(reiheZähler, spalteZähler);
                 string path = "";
-                ZubauZelleClass1.FileRead(path, this, 0);
+                ZubauZelleClass1.DateiHochLaden(path, this, 0);
             }
         }
         public void R_MouseDown(object sender, MouseButtonEventArgs e)
@@ -108,7 +108,7 @@ namespace GameOf
             Nullable<bool> result = path.ShowDialog();
             if (result==true)
             {
-                ZubauZelleClass1.FileRead(path.FileName, this, 1);
+                ZubauZelleClass1.DateiHochLaden(path.FileName, this, 1);
             }
                
           
@@ -154,7 +154,7 @@ namespace GameOf
                 }
                 ZubauZelleClass1.Speichern_(path1, this);
                 Contrrol.DoKlein(this);
-                ZubauZelleClass1.FileRead(path1, this, 2);
+                ZubauZelleClass1.DateiHochLaden(path1, this, 2);
                 if (auto_Start)
                 {
                     autoStart = true;
@@ -180,7 +180,7 @@ namespace GameOf
                 }
                 ZubauZelleClass1.Speichern_(path1, this);
                 Contrrol.DoMittlere(this);
-                ZubauZelleClass1.FileRead(path1, this, 2);
+                ZubauZelleClass1.DateiHochLaden(path1, this, 2);
                 if (auto_Start)
                 {
                     autoStart = true;
@@ -203,7 +203,7 @@ namespace GameOf
                 }
                 ZubauZelleClass1.Speichern_(path1, this);
                 Contrrol.DoFullScreen(this);
-                ZubauZelleClass1.FileRead(path1, this, 2);
+                ZubauZelleClass1.DateiHochLaden(path1, this, 2);
                 if (auto_Start)
                 { 
                     autoStart = true;

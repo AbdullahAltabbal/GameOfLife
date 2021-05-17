@@ -19,8 +19,8 @@
         </Label>
         <Canvas x:Name="Zeichenfläche" Margin="190,146,35,32" Background="LightGray" />
         <Button x:Name="Speichern" Content="Speichern" Margin="10,182,0,0" FontFamily="Comic Sans MS" FontSize="20" IsDefault="True" Click="Speichern_Click" MinHeight="31" MinWidth="117" Height="31" VerticalAlignment="Top" HorizontalAlignment="Left" Width="117" />
-        <Button x:Name="Upload" Content="Upload" Margin="10,218,0,0" FontFamily="Comic Sans MS" FontSize="20" IsDefault="True" Click="Upload_Click" Height="31" VerticalAlignment="Top" HorizontalAlignment="Left" Width="117" />
-        <Button x:Name="Zellbau" Content="Zellbau" Margin="10,146,0,0" FontFamily="Comic Sans MS" FontSize="20" IsDefault="True" Click="Zellbau_Click" Height="31" VerticalAlignment="Top" HorizontalAlignment="Left" Width="117"/>
+        <Button x:Name="Upload" Content="hochladen" Margin="10,218,0,0" FontFamily="Comic Sans MS" FontSize="20" IsDefault="True" Click="Upload_Click" Height="31" VerticalAlignment="Top" HorizontalAlignment="Left" Width="117" />
+        <Button x:Name="Zellbau" Content="bauen" Margin="10,146,0,0" FontFamily="Comic Sans MS" FontSize="20" IsDefault="True" Click="Zellbau_Click" Height="31" VerticalAlignment="Top" HorizontalAlignment="Left" Width="117"/>
         <Button x:Name="Start" Content="nächste" Margin="10,280,0,0" FontFamily="Comic Sans MS" FontSize="20" IsDefault="True" Click="Start_Click" Height="31" VerticalAlignment="Top" RenderTransformOrigin="1.83,0.794" HorizontalAlignment="Left" Width="117"/>
         <Button x:Name="Auto_Start" Content="Start" Margin="10,316,0,0" VerticalAlignment="Top" FontFamily="Comic Sans MS" FontSize="20" IsDefault="True" Click="Auto_Start_Click" HorizontalAlignment="Left" Width="117"/>
         <Label Content="anzahl der Generation:" Height="42" Margin="10,69,0,0" VerticalAlignment="Top" RenderTransformOrigin="-1.399,0.226" Background="{x:Null}" FontFamily="Comic Sans MS" FontSize="20" HorizontalAlignment="Left" Width="224">
@@ -36,7 +36,7 @@
         <TextBox x:Name="AnzahlGeneration" Height="33" Margin="10,108,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" FontSize="20" FontFamily="Comic Sans MS" IsEnabled="False" HorizontalAlignment="Left" Width="117"/>
         <Button x:Name="Kleine_Groesse" Content="kleine Größe" Margin="10,435,0,0" FontFamily="Comic Sans MS" FontSize="20" IsDefault="True" Click="Kleine_Groesse_Click" Height="31" VerticalAlignment="Top" HorizontalAlignment="Left" Width="142" />
         <Button x:Name="Mittlere_Groesse" Content="mittlere Größe" Margin="10,471,0,0" FontFamily="Comic Sans MS" FontSize="20" IsDefault="True" Click="Mittlere_Groesse_Click" Height="31" VerticalAlignment="Top" HorizontalAlignment="Left" Width="142"/>
-        <Button x:Name="Full_Screen" Content="Full Screen" Margin="10,507,0,0" FontFamily="Comic Sans MS" FontSize="20" IsDefault="True" Click="Full_Screen_Click" Height="31" VerticalAlignment="Top" HorizontalAlignment="Left" Width="142" />
+        <Button x:Name="Full_Screen" Content="voll Bildschirm" Margin="10,507,0,0" FontFamily="Comic Sans MS" FontSize="20" IsDefault="True" Click="Full_Screen_Click" Height="31" VerticalAlignment="Top" HorizontalAlignment="Left" Width="142" />
         <Label Content="Geschwindigkeit:" Height="42" Margin="8,347,0,0" VerticalAlignment="Top" RenderTransformOrigin="-1.399,0.226" Background="{x:Null}" FontFamily="Comic Sans MS" FontSize="20" HorizontalAlignment="Left" Width="171">
             <Label.RenderTransform>
                 <TransformGroup>

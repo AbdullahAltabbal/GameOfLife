@@ -11,29 +11,32 @@ using System.Windows;
 
 namespace GameOf
 {
-    class ZubauZelleClass1
+    public class ZubauZelleClass1
     {
         public static int heightZähler { get; set; }
         public static int widthZähler { get; set; }
         public static Rectangle[,] felder { get; set; }
 
-        public ZubauZelleClass1(int reihe_Zähler,int spalte_Zähler)
+        // Konstruktor wird die Zellen auf dem Überfläche gebaut 
+        public ZubauZelleClass1(int reihe_Zähler, int spalte_Zähler)
         {
             heightZähler = reihe_Zähler;
             widthZähler = spalte_Zähler;
             felder = new Rectangle[heightZähler, widthZähler];
         }
-        public static void FileRead(string path, MainWindow win, int x)
+
+        // gespeicherte Datei hochladen und anzeigen 
+        public static void DateiHochLaden(string path, MainWindow win, int x)
         {
             if (x == 1)
-            {                
-                A_GenerationSpRei(path, win);
+            {
+                A_GenerationSpaltenReihen(path, win);
                 ZubauZelleClass1 neuZell = new ZubauZelleClass1(heightZähler, widthZähler);
             }
             else if (x == 2)
             {
-                A_GenerationSpRei(path, win);
-            } 
+                A_GenerationSpaltenReihen(path, win);
+            }
             else { win.anzahlGeneration = 0; }
             win.AnzahlGeneration.Text = Convert.ToString(win.anzahlGeneration);
 
@@ -54,14 +57,15 @@ namespace GameOf
                 }
 
             }
-            else 
-            { 
+            else
+            {
                 linesText = File.ReadAllLines(path).ToList();
-                linesText.RemoveRange(0,3);                
+                linesText.RemoveRange(0, 3);
             }
-            Zellebau(win, linesText.Count, linesText); 
+            Zellebau(win, linesText.Count, linesText);
         }
-        public static void A_GenerationSpRei(string path, MainWindow win)
+
+        public static void A_GenerationSpaltenReihen(string path, MainWindow win)
         {
             List<string> lines_Text = new List<string>();
             lines_Text.Clear();
@@ -73,7 +77,7 @@ namespace GameOf
             win.Spalte.Text = Convert.ToString(widthZähler);
             win.Reihen.Text = Convert.ToString(heightZähler);
         }
-       public static Random zufall = new Random();
+        public static Random zufall = new Random();
         public static string ZufallNummer(Random zufall)
         {
             int random = 0;
@@ -86,9 +90,9 @@ namespace GameOf
             int i = 0;
             foreach (string heighZell in spalten)
             {
-             
-                    char[] widthZelle = heighZell.ToCharArray();
-                    int j = 0;
+
+                char[] widthZelle = heighZell.ToCharArray();
+                int j = 0;
                 foreach (char widthZell in widthZelle)
                 {
                     Rectangle r = new Rectangle();
